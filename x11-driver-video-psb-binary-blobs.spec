@@ -1,6 +1,6 @@
 %define name x11-driver-video-psb-binary-blobs
 %define version 0
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Binary components of the X.org driver for Poulsbo chipsets
 Name: %{name}
@@ -30,7 +30,10 @@ install -d %{buildroot}/lib/firmware/
 install -m644 psb-firmware/*.bin %{buildroot}/lib/firmware/
 
 install -d %{buildroot}%{_libdir}/dri/
-install -m644 xpsb-glx/dri/* %{buildroot}%{_libdir}/dri/
+install -m644 xpsb-glx/dri/*dri* %{buildroot}%{_libdir}/dri/
+
+install -d %{buildroot}%{_libdir}/va/drivers
+install -m644 xpsb-glx/dri/*video* %{buildroot}%{_libdir}/va/drivers
 
 install -d %{buildroot}%{_libdir}/xorg/modules/
 install -m644 xpsb-glx/drivers/* %{buildroot}%{_libdir}/xorg/modules/
@@ -42,7 +45,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 /lib/firmware/msvdx_fw.bin
 %{_libdir}/dri/psb_dri.so
-%{_libdir}/dri/psb_drv_video.la
-%{_libdir}/dri/psb_drv_video.so
+%{_libdir}/va/drivers/psb_drv_video.la
+%{_libdir}/va/drivers/psb_drv_video.so
 %{_libdir}/xorg/modules/Xpsb.la
 %{_libdir}/xorg/modules/Xpsb.so
