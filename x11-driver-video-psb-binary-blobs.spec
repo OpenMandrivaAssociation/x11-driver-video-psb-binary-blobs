@@ -1,6 +1,6 @@
 %define name x11-driver-video-psb-binary-blobs
 %define version 0
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: Binary components of the X.org driver for Poulsbo chipsets
 Name: %{name}
