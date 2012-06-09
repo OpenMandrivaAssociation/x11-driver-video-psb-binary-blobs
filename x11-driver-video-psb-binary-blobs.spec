@@ -1,18 +1,13 @@
-%define name x11-driver-video-psb-binary-blobs
-%define version 0
-%define release %mkrel 4
-
 Summary: Binary components of the X.org driver for Poulsbo chipsets
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Name: x11-driver-video-psb-binary-blobs
+Version: 0
+Release: 5
 Source0: http://ppa.launchpad.net/ubuntu-mobile/ppa/ubuntu/pool/main/p/psb-firmware/psb-firmware_0.30.orig.tar.gz
 Source1: http://ppa.launchpad.net/ubuntu-mobile/ppa/ubuntu/pool/main/x/xpsb-glx/xpsb-glx_0.18.orig.tar.gz
 License: Proprietary
 Group: System/Kernel and hardware
 Url: http://gma500.wiki-site.com/index.php/Main_Page
-Exclusivearch: %{ix86} x86_64
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Exclusivearch: %{ix86}
 
 %description
 This packages contains the binary components of the X.org driver for
