@@ -6,7 +6,7 @@ Source0: http://ppa.launchpad.net/ubuntu-mobile/ppa/ubuntu/pool/main/p/psb-firmw
 Source1: http://ppa.launchpad.net/ubuntu-mobile/ppa/ubuntu/pool/main/x/xpsb-glx/xpsb-glx_0.18.orig.tar.gz
 License: Proprietary
 Group: System/Kernel and hardware
-Url: http://gma500.wiki-site.com/index.php/Main_Page
+Url: https://gma500.wiki-site.com/index.php/Main_Page
 Exclusivearch: %{ix86}
 
 %description
